@@ -2,7 +2,7 @@
 <project name="ApacheAntLab" default="compile">
 	<target name="compile">
 		<mkdir dir="build/classes"/>
-        <javac srcdir="./src" destdir="build/classes" >
+        <javac srcdir="./src" destdir="build/classes" includeantruntime="false">
             <classpath>
             	<pathelement path="lib/json-simple-1.1.1.jar"/>
             </classpath>
