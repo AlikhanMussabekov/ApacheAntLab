@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<project name="ApacheAntLab" default="compile">
+	<target name="compile">
+		<mkdir dir="build/classes"/>
+        <javac srcdir="./src" destdir="build/classes" >
+            <classpath>
+            	<pathelement path="lib/json-simple-1.1.1.jar"/>
+            </classpath>
+        </javac>
+	</target>
+</project>
