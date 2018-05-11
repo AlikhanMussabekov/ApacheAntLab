@@ -1,4 +1,3 @@
-package ru.cs.ifmo;
 
 public class lab4 {
     public static void labText() throws NewError, MyException {

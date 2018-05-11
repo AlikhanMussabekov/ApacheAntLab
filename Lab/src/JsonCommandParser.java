@@ -1,6 +1,6 @@
-package ru.cs.ifmo;
 
 import java.io.IOException;
+import java.lang.reflect.Array;
 import java.util.Scanner;
 import org.json.simple.parser.*;
 import org.json.simple.JSONObject;
@@ -10,7 +10,6 @@ public class JsonCommandParser {
 
         Scanner in = new Scanner(System.in);
         String jsonStringIN = in.nextLine();
-
 
         JSONParser parser = new JSONParser();
         JSONObject jsonCommand = null;
@@ -24,7 +23,9 @@ public class JsonCommandParser {
 
             //{"name": "vasyap", "age": 10}
             //{"name":"бабушки", "age": 50}
-            //{"name":"Alikhan", "age": 322222}
+            //{"name":"n","age":322222}
+            //{"name":"H234","age":22}
+            
         switch(cmd){
             case "remove_greater":
                 tree.remove_greater(jsonCommand);

@@ -1,4 +1,3 @@
-package ru.cs.ifmo;
 
 import org.json.simple.parser.ParseException;
 
@@ -28,8 +27,9 @@ public class lab5Main {
             }
         }));
 
-        Scanner path = new Scanner(System.getenv("PATH"));
-        path.useDelimiter(":");
+        Scanner path = new Scanner(System.getenv("LAB"));
+
+        /*path.useDelimiter(":");
 
         String pathStr;
         String check = null;
@@ -43,8 +43,11 @@ public class lab5Main {
 
         }
         path.close();
+        */
 
-        mainTree.setPath(check);
+        String pathStr = path.next();
+
+        mainTree.setPath(pathStr);
         mainTree.readElements();
 
         mainTree.writeElements();

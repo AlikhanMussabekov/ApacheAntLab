@@ -1,4 +1,3 @@
-package ru.cs.ifmo;
 
 public class Citizens implements Creature{
 

@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<project name="ApacheAntLab" default="run">
+
+	<!-- define names of directories-->
+	<property name="src" location="/programming/Java/lab5/lab4/src/ru/cs/ifmo"/>
+	<property name="build" location="build"/>
+	<property name="classes" location="${build}/classes"/>
+	<property name="simpleJson" location="lib/json-simple-1.1.1.jar"/>
+
+	<path id="classpath">
+      <pathelement location="${simpleJson}" />
+   	</path>
+
+	<!-- targets -->
+	 <target name="compile">
+		<mkdir dir="${classes}"/>
+        <javac srcdir="${src}" destdir="${classes}" includeantruntime="false" classpathref="classpath"/>
+	</target>
+
+	<target name="build" depends="compile">
+		<jar destfile="./${ant.project.name}.jar" basedir="${classes}">
+			<manifest>
+				<attribute name="Main-Class" value="ru.cs.ifmo.lab5Main"/>
+				<attribute name="Class-Path" value="lib/json-simple-1.1.1.jar"/>
+			</manifest>
+		</jar>
+	</target>
+
+	<target name="run" depends="build">
+		<java jar="./${ant.project.name}.jar" classpath="lib/json-simple-1.1.1.jar" fork="true"/>
+	</target>
+
+	<target name="clean">
+        <delete dir="${build}"/>
+    </target>
+
+
+</project>

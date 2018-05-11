@@ -1,4 +1,3 @@
-package ru.cs.ifmo;
 
 public enum State {
     TOPRAISE(" похвалили ") , WILLNOTDARE("не осмелится "), DIDNOTAPPEAR("не появлялся "), APPEAR("появился"), TOLD("рассказывал"),

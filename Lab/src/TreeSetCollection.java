@@ -1,4 +1,3 @@
-package ru.cs.ifmo;
 
 import org.json.simple.JSONObject;
 
@@ -22,7 +21,7 @@ class TreeSetCollection {
 
         this.path = path;
 
-        in = new Scanner(new File(path + "/str.csv"));
+        in = new Scanner(new File(path));
     }
 
     public void readElements(){
@@ -72,7 +71,7 @@ class TreeSetCollection {
 
     public void save() throws IOException {
 
-        out = new FileOutputStream(path + "/str.csv");
+        out = new FileOutputStream(path);
 
         byte[] buffer;
         String curStr = "";
